@@ -10,8 +10,8 @@
 
 ## Grading Outline
 
-- [ ] tree-map
-- [ ] js-inheritance-pseudo-classical
+- [Mostly complete] tree-map
+- [Mostly complete] js-inheritance-pseudo-classical
 
 ## Using and Referencing Outside resources
 

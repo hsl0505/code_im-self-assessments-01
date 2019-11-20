@@ -35,10 +35,29 @@ var Tree = function(value) {
 
 Tree.prototype.addChild = function(child) {
   // your code here
+  var addTarget = new Tree(child);
+  this.children.push(addTarget);
+  return addTarget;
 };
 
 Tree.prototype.map = function(callback) {
   // your code here
+  var newInstance = // this를 참조하지않고 같은 구조를 가진 새로운 객체가 들어와야되는데...ㅠㅠㅠ
+  for (var key in this) {
+    newInstance[key] = this[key];
+  }
+
+  var target = newInstance;
+
+  function recursion(recursionTarget) {
+    callback(recursionTarget)
+    for (var i=0; i<recursionTarget.children.length; i=i+1) {
+      recursion(recursionTarget.children[i])
+    }
+  }
+  recursion(target)
+
+  return newInstance
 };
 
 module.exports = Tree;
