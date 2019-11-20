@@ -42,7 +42,7 @@ Tree.prototype.addChild = function(child) {
 
 Tree.prototype.map = function(callback) {
   // your code here
-  var newInstance = // this를 참조하지않고 같은 구조를 가진 새로운 객체가 들어와야되는데...ㅠㅠㅠ
+  var newInstance ;// this를 참조하지않고 같은 구조를 가진 새로운 객체가 들어와야되는데...ㅠㅠㅠ
   for (var key in this) {
     newInstance[key] = this[key];
   }
